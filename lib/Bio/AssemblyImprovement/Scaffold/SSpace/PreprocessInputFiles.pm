@@ -6,8 +6,10 @@ use Moose;
 use Cwd 'abs_path';
 use File::Basename;
 use IO::Uncompress::Gunzip qw(gunzip $GunzipError);
+
 with 'Bio::AssemblyImprovement::Scaffold::SSpace::TempDirectoryRole';
 with 'Bio::AssemblyImprovement::Abacas::DelimiterRole';
+with 'Bio::AssemblyImprovement::Util::UnzipFileIfNeededRole';
 
 has 'input_assembly' => ( is => 'ro', isa => 'Str',      required => 1 );
 has 'input_files'    => ( is => 'ro', isa => 'Maybe[ArrayRef]');
@@ -28,7 +30,7 @@ sub _build_processed_input_files {
     return undef unless(defined($self->input_files));
 
     for my $filename ( @{ $self->input_files } ) {
-        push( @processed_input_files, $self->_gunzip_file_if_needed($filename) );
+        push( @processed_input_files,  $self->_gunzip_file_if_needed( $filename, $self->_temp_directory) );
     }
     return \@processed_input_files;
 }
@@ -41,7 +43,7 @@ sub _build_processed_input_assembly {
 sub _build_processed_reference {
     my ($self) = @_;
     return undef unless(defined($self->reference));
-    return $self->_gunzip_file_if_needed($self->reference);
+    return $self->_gunzip_file_if_needed($self->reference, $self->_temp_directory);
 }
 
 # Throw away small contigs, but not if the overall size of the genome drops too low
@@ -72,22 +74,6 @@ sub _remove_small_contigs
   return $output_filename;
 }
 
-
-sub _gunzip_file_if_needed {
-    my ( $self, $input_filename ) = @_;
-    $input_filename = abs_path($input_filename);
-    
-    if ( $input_filename =~ /\.gz$/ ) {
-        my $base_filename = fileparse( $input_filename, qr/\.[^.]*/ );
-        my $output_filename = join( '/', ( $self->_temp_directory, $base_filename ) );
-        gunzip $input_filename => $output_filename or die "gunzip failed: $GunzipError\n";
-        return $output_filename;
-    }
-    else {
-        return $input_filename;
-    }
-}
-
 no Moose;
 __PACKAGE__->meta->make_immutable;
 1;
@@ -102,7 +88,7 @@ Bio::AssemblyImprovement::Scaffold::SSpace::PreprocessInputFiles - Make sure the
 
 =head1 VERSION
 
-version 1.123530
+version 1.130420
 
 =head1 SYNOPSIS
 

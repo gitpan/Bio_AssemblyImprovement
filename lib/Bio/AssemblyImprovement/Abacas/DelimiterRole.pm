@@ -13,9 +13,7 @@ sub _sequence_delimiter
 {
   my ($self, $filename) = @_;
   my $spacer = "";
-  for (1..100){ $spacer.="NNNNNNNNNN"; }
-  for (1..500) { $spacer.="GGGGGGGGGG"; }
-  for (1..100){ $spacer.="NNNNNNNNNN"; }
+  for (1..100){ $spacer.="N"; }
   return $spacer;
 }
 
@@ -97,7 +95,7 @@ Bio::AssemblyImprovement::Abacas::DelimiterRole - Moose Role for putting in deli
 
 =head1 VERSION
 
-version 1.123530
+version 1.130420
 
 =head1 SYNOPSIS
 

@@ -37,7 +37,7 @@ Bio::AssemblyImprovement::Scaffold::SSpace::TempDirectoryRole - Role for handlin
 
 =head1 VERSION
 
-version 1.123530
+version 1.130420
 
 =head1 SYNOPSIS
 

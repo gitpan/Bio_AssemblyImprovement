@@ -89,7 +89,7 @@ Bio::AssemblyImprovement::Abacas::Main - Wrapper script for Abacas, just runs it
 
 =head1 VERSION
 
-version 1.123530
+version 1.130420
 
 =head1 SYNOPSIS
 

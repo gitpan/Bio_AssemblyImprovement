@@ -24,6 +24,7 @@ my %WriteMakefileArgs = (
     "bin/fill_gaps_with_gapfiller",
     "bin/improve_assembly",
     "bin/order_contigs_with_abacas",
+    "bin/read_correction_with_sga",
     "bin/scaffold_with_sspace"
   ],
   "LICENSE" => "gpl",
@@ -38,6 +39,7 @@ my %WriteMakefileArgs = (
     "File::Which" => 0,
     "Getopt::Long" => 0,
     "Getopt::Std" => 0,
+    "IO::Compress::Gzip" => 0,
     "IO::Uncompress::Gunzip" => 0,
     "Moose" => 0,
     "Moose::Role" => 0,
@@ -45,9 +47,9 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.123530",
+  "VERSION" => "1.130420",
   "test" => {
-    "TESTS" => "t/Abacas/*.t t/FillGaps/*.t t/Overall/*.t t/Scaffold/*.t"
+    "TESTS" => "t/Abacas/*.t t/Assemble/SGA/*.t t/FillGaps/*.t t/Overall/*.t t/Scaffold/*.t"
   }
 );
 
