@@ -3,6 +3,7 @@ abstract: 'Improve an assembly by scaffolding, contig ordering and gap closing.'
 author:
   - 'Andrew J. Page <ap13@sanger.ac.uk>'
 build_requires:
+  File::Slurp: 0
   Test::Most: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
@@ -33,4 +34,4 @@ requires:
 resources:
   homepage: http://www.sanger.ac.uk/
   repository: https://github.com/sanger-pathogens/assembly_improvement.git
-version: 1.130420
+version: 1.130780

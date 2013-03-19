@@ -7,7 +7,6 @@ use Cwd;
 use File::Basename;
 use File::Copy;
 use Bio::AssemblyImprovement::Scaffold::SSpace::Main;
-
 with 'Bio::AssemblyImprovement::Scaffold::SSpace::OutputFilenameRole';
 with 'Bio::AssemblyImprovement::Scaffold::SSpace::TempDirectoryRole';
 
@@ -89,7 +88,7 @@ Bio::AssemblyImprovement::Scaffold::SSpace::Iterative - Iteratively run SSpace.
 
 =head1 VERSION
 
-version 1.130420
+version 1.130780
 
 =head1 SYNOPSIS
 

@@ -74,7 +74,7 @@ Bio::AssemblyImprovement::Scaffold::SSpace::Main - Run one iteration of SSpace
 
 =head1 VERSION
 
-version 1.130420
+version 1.130780
 
 =head1 SYNOPSIS
 

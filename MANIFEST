@@ -10,6 +10,7 @@ bin/fill_gaps_with_gapfiller
 bin/improve_assembly
 bin/order_contigs_with_abacas
 bin/read_correction_with_sga
+bin/rename_contigs
 bin/scaffold_with_sspace
 dist.ini
 lib/Bio/AssemblyImprovement.pm
@@ -22,6 +23,7 @@ lib/Bio/AssemblyImprovement/Assemble/SGA/PreprocessReads.pm
 lib/Bio/AssemblyImprovement/FillGaps/GapFiller/Config.pm
 lib/Bio/AssemblyImprovement/FillGaps/GapFiller/Iterative.pm
 lib/Bio/AssemblyImprovement/FillGaps/GapFiller/Main.pm
+lib/Bio/AssemblyImprovement/PrepareForSubmission/RenameContigs.pm
 lib/Bio/AssemblyImprovement/Scaffold/Descaffold.pm
 lib/Bio/AssemblyImprovement/Scaffold/SSpace/Config.pm
 lib/Bio/AssemblyImprovement/Scaffold/SSpace/Iterative.pm
@@ -40,6 +42,7 @@ t/Assemble/SGA/PreprocessReads.t
 t/FillGaps/GapFillerConfig.t
 t/FillGaps/Iterative.t
 t/Overall/CheckAllModulesCompile.t
+t/PrepareForSubmission/RenameContigs.t
 t/Scaffold/Descaffold.t
 t/Scaffold/Iterative.t
 t/Scaffold/PreprocessInputFiles.t
@@ -48,7 +51,9 @@ t/data/contigs.fa
 t/data/contigs.scaffolded.fa
 t/data/contigs.scaffolded.fa.descaffolded
 t/data/contigs.scaffolded.fa.descaffolded.expected
+t/data/contigs_needing_to_be_renamed.fa
 t/data/contigs_with_Ns.fa
+t/data/expected_contigs_needing_to_be_renamed.fa
 t/data/expected_reference_over_multiple_lines.fa.union.fa
 t/data/forward.fastq
 t/data/forward.fastq.gz

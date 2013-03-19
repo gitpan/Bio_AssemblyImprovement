@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Improve an assembly by scaffolding, contig ordering and gap closing.",
   "AUTHOR" => "Andrew J. Page <ap13\@sanger.ac.uk>",
   "BUILD_REQUIRES" => {
+    "File::Slurp" => 0,
     "Test::Most" => 0
   },
   "CONFIGURE_REQUIRES" => {
@@ -25,6 +26,7 @@ my %WriteMakefileArgs = (
     "bin/improve_assembly",
     "bin/order_contigs_with_abacas",
     "bin/read_correction_with_sga",
+    "bin/rename_contigs",
     "bin/scaffold_with_sspace"
   ],
   "LICENSE" => "gpl",
@@ -47,9 +49,9 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.130420",
+  "VERSION" => "1.130780",
   "test" => {
-    "TESTS" => "t/Abacas/*.t t/Assemble/SGA/*.t t/FillGaps/*.t t/Overall/*.t t/Scaffold/*.t"
+    "TESTS" => "t/Abacas/*.t t/Assemble/SGA/*.t t/FillGaps/*.t t/Overall/*.t t/PrepareForSubmission/*.t t/Scaffold/*.t"
   }
 );
 
