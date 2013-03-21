@@ -41,7 +41,7 @@ Bio::AssemblyImprovement::Util::UnzipFileIfNeededRole - Role for unzipping files
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 

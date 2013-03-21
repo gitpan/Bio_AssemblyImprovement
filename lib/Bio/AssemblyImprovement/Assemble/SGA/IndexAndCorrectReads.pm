@@ -94,7 +94,7 @@ Bio::AssemblyImprovement::Assemble::SGA::IndexAndCorrectReads - Performs SGA err
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 

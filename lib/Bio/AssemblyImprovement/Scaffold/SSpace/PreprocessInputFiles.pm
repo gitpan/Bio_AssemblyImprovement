@@ -88,7 +88,7 @@ Bio::AssemblyImprovement::Scaffold::SSpace::PreprocessInputFiles - Make sure the
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 

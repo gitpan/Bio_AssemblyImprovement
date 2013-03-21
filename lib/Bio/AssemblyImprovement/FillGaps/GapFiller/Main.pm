@@ -75,7 +75,7 @@ Bio::AssemblyImprovement::FillGaps::GapFiller::Main - Run a single iteration of 
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 

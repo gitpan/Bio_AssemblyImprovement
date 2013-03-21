@@ -32,7 +32,7 @@ Bio::AssemblyImprovement::Validate::Executable - Validates the executable is ava
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 

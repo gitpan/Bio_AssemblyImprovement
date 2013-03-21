@@ -38,7 +38,9 @@ sub _temp_output_filename {
 
 sub _generate_contig_name {
     my ( $self, $counter ) = @_;
-    return join( '.', ( $self->base_contig_name, $counter ) );
+    my $normalised_basename = $self->base_contig_name ;
+    $normalised_basename =~ s![^\w\.]!_!gi;
+    return join( '.', ( $normalised_basename, $counter ) );
 }
 
 sub _create_temp_outputfile {
@@ -72,7 +74,7 @@ Bio::AssemblyImprovement::PrepareForSubmission::RenameContigs - Update the names
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 

@@ -87,7 +87,7 @@ Bio::AssemblyImprovement::Assemble::SGA::PreprocessReads - Preprocess reads befo
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 

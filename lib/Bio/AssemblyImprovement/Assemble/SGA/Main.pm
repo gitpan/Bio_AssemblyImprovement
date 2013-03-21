@@ -117,7 +117,7 @@ Bio::AssemblyImprovement::Assemble::SGA::Main - Run SGA preprocess and error cor
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 

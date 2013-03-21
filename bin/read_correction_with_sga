@@ -118,7 +118,7 @@ read_correction_with_sga - Given two fastq files (forward and reverse), try and 
 
 =head1 VERSION
 
-version 1.130780
+version 1.130800
 
 =head1 SYNOPSIS
 
