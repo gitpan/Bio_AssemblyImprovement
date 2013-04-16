@@ -32,7 +32,7 @@ Bio::AssemblyImprovement::Scaffold::SSpace::OutputFilenameRole - Role for handli
 
 =head1 VERSION
 
-version 1.130800
+version 1.131060
 
 =head1 SYNOPSIS
 

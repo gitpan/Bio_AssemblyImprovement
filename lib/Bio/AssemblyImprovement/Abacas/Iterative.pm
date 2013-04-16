@@ -89,7 +89,7 @@ Bio::AssemblyImprovement::Abacas::Iterative - Iteratively run abacas to order co
 
 =head1 VERSION
 
-version 1.130800
+version 1.131060
 
 =head1 SYNOPSIS
 

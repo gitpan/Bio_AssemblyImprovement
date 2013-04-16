@@ -33,7 +33,7 @@ Bio::AssemblyImprovement::Scaffold::SSpace::Config - Create the config file that
 
 =head1 VERSION
 
-version 1.130800
+version 1.131060
 
 =head1 SYNOPSIS
 

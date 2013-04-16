@@ -34,4 +34,4 @@ requires:
 resources:
   homepage: http://www.sanger.ac.uk/
   repository: https://github.com/sanger-pathogens/assembly_improvement.git
-version: 1.130800
+version: 1.131060

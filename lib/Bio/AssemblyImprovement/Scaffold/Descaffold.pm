@@ -52,7 +52,7 @@ Bio::AssemblyImprovement::Scaffold::Descaffold - Given a fasta file as input, ou
 
 =head1 VERSION
 
-version 1.130800
+version 1.131060
 
 =head1 SYNOPSIS
 

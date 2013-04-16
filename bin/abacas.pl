@@ -1990,7 +1990,7 @@ abacas.pl - Algorithm Based Automatic Contiguation of Assembled Sequences
 
 =head1 VERSION
 
-version 1.130800
+version 1.131060
 
 =head1 AUTHOR
 
