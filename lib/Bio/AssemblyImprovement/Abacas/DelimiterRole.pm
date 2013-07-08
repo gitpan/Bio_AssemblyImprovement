@@ -95,7 +95,7 @@ Bio::AssemblyImprovement::Abacas::DelimiterRole - Moose Role for putting in deli
 
 =head1 VERSION
 
-version 1.131060
+version 1.131890
 
 =head1 SYNOPSIS
 

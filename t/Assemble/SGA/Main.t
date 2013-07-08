@@ -14,15 +14,13 @@ BEGIN {
 
 my $current_dir = getcwd();
 
-
-
 ok(
     (
     my $sga = Bio::AssemblyImprovement::Assemble::SGA::Main->new(
             input_files     => [ $current_dir.'/t/data/forward.fastq', $current_dir.'/t/data/reverse.fastq' ] ,
-            algorithm      	=> 'ropebwt',
+            pe_mode	        => 1,
       		threads         => 8,
-      		kmer_length	    => 40,
+      		kmer_length	    => 41,
             sga_exec        => $current_dir.'/t/dummy_sga_script',
     	)
     ),
@@ -31,10 +29,7 @@ ok(
 
 ok($sga->run(), 'Run the SGA preprocess and correct steps with dummy scripts');
 
-# is (got, expected, name)
-
-# Test: Is the preprocessed file available?
-
+# Test (is, got,expected): Is the preprocessed file available?
 is(
     $sga->_intermediate_file,
     join ('/', $sga->_temp_directory, '_sga_preprocessed.fastq'),   
@@ -42,18 +37,16 @@ is(
 
 ok(-e $sga->_intermediate_file, 'SGA preprocessed file in right locations');
 
-
-
 # Test: Is the name of the results file as expected?
 is(
     $sga->_final_results_file,
-    join ('/', $current_dir, '_sga_error_corrected.fastq'),   
+    join ('/', $current_dir, '_sga_error_corrected.fastq.gz'),   
    'Default results file name ok');
    
 
 # Test: Is the results file available?
 ok(-e $sga->_final_results_file, 'SGA results file exists in expected location');
-
 unlink($sga->_final_results_file);
+
 
 done_testing();

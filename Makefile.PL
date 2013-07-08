@@ -13,6 +13,7 @@ my %WriteMakefileArgs = (
   "AUTHOR" => "Andrew J. Page <ap13\@sanger.ac.uk>",
   "BUILD_REQUIRES" => {
     "File::Slurp" => 0,
+    "Test::File::Contents" => 0,
     "Test::Most" => 0
   },
   "CONFIGURE_REQUIRES" => {
@@ -22,10 +23,13 @@ my %WriteMakefileArgs = (
   "EXE_FILES" => [
     "bin/abacas.pl",
     "bin/descaffold_assembly",
+    "bin/diginorm_with_khmer",
+    "bin/fastq_tools",
     "bin/fill_gaps_with_gapfiller",
     "bin/improve_assembly",
     "bin/order_contigs_with_abacas",
     "bin/read_correction_with_sga",
+    "bin/remove_primers_with_quasr",
     "bin/rename_contigs",
     "bin/scaffold_with_sspace"
   ],
@@ -46,12 +50,14 @@ my %WriteMakefileArgs = (
     "Moose" => 0,
     "Moose::Role" => 0,
     "POSIX" => 0,
+    "Statistics::Lite" => 0,
+    "Switch" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.131060",
+  "VERSION" => "1.131890",
   "test" => {
-    "TESTS" => "t/Abacas/*.t t/Assemble/SGA/*.t t/FillGaps/*.t t/Overall/*.t t/PrepareForSubmission/*.t t/Scaffold/*.t"
+    "TESTS" => "t/Abacas/*.t t/Assemble/SGA/*.t t/DigitalNormalisation/Khmer/*.t t/FillGaps/*.t t/Overall/*.t t/PrepareForSubmission/*.t t/PrimerRemoval/*.t t/Scaffold/*.t t/Util/*.t"
   }
 );
 

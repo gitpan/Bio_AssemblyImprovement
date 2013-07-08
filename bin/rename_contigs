@@ -46,7 +46,7 @@ rename_contigs - Given an assembly, rename the contigs iteratively
 
 =head1 VERSION
 
-version 1.131060
+version 1.131890
 
 =head1 SYNOPSIS
 

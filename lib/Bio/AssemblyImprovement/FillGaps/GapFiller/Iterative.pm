@@ -103,7 +103,7 @@ Bio::AssemblyImprovement::FillGaps::GapFiller::Iterative - Iteratively close gap
 
 =head1 VERSION
 
-version 1.131060
+version 1.131890
 
 =head1 SYNOPSIS
 

@@ -15,7 +15,6 @@ with 'Bio::AssemblyImprovement::Util::ZipFileRole';
 has 'input_filename'    => ( is => 'ro', isa => 'Str',   required => 1);
 has 'algorithm'	        => ( is => 'ro', isa => 'Str',   default => 'ropebwt'); # BWT construction algorithm: sais or ropebwt
 has 'threads'	        => ( is => 'ro', isa => 'Num',   default => 1); # Use this many threads for computation
-has 'disk'				=> ( is => 'ro', isa => 'Num', default => 1000000); # suffix array??
 has 'kmer_threshold'	=> ( is => 'ro', isa => 'Num',   default=> 5); # Attempt to correct kmers that are seen less than this many times
 has 'kmer_length'	    => ( is => 'ro', isa => 'Num',   default=> 41); # Since our coverage is usually high, we use 41. If not, 31 is OK.
 has 'output_filename'   => ( is => 'rw', isa => 'Str',   default  => '_sga_error_corrected.fastq' );
@@ -43,7 +42,6 @@ sub run {
                 $self->sga_exec, 'index',
                 '-a', $self->algorithm,
                 '-t', $self->threads, 
-                '-d', $self->disk,
                 '--no-reverse', 
                	$input_filename,
                 $stdout_of_program
@@ -59,7 +57,7 @@ sub run {
                 $self->sga_exec, 'correct',
                 '-k', $self->kmer_length,
                 #'--discard', #Do not do discard. It creates orphan reads and does not make much of a difference with velvet
-                '--learn',
+                #'--learn', #Do not try to learn the kmer threshold. After normalisation, coverage may drop to below 20 in which case learning will not work
                 '-x', $self->kmer_threshold,
                 '-t', $self->threads, 
                 '-o', $self->output_filename,
@@ -94,7 +92,7 @@ Bio::AssemblyImprovement::Assemble::SGA::IndexAndCorrectReads - Performs SGA err
 
 =head1 VERSION
 
-version 1.131060
+version 1.131890
 
 =head1 SYNOPSIS
 

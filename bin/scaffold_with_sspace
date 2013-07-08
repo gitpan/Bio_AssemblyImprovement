@@ -54,7 +54,7 @@ make_path($output_directory);
 
 my @input_files = ( $forward_reads_file, $reverse_reads_file );
 
-my $preprocess_input_files = Bio::AssemblyImprovement::SSpace::PreprocessInputFiles->new(
+my $preprocess_input_files = Bio::AssemblyImprovement::Scaffold::SSpace::PreprocessInputFiles->new(
     input_files    => \@input_files,
     input_assembly => $assembly_file
 );
@@ -79,7 +79,7 @@ scaffold_with_sspace - Given an assembly and some reads in fastq format, try and
 
 =head1 VERSION
 
-version 1.131060
+version 1.131890
 
 =head1 SYNOPSIS
 
