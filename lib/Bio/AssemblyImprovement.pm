@@ -23,7 +23,7 @@ Bio::AssemblyImprovement - Improve an assembly by scaffolding, contig ordering a
 
 =head1 VERSION
 
-version 1.131890
+version 1.132610
 
 =head1 SYNOPSIS
 

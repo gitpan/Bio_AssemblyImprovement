@@ -47,13 +47,13 @@ sub run
 
   if( ($self->_count_genomic_bases($nucmer_filename )*100)/$original_base_count >=  $self->minimum_perc_to_keep)
   {
-    return $nucmer_filename->final_output_filename ;
+    return $nucmer_filename;
   }
 
   my $promer_filename = $self->_run_abacas('promer');
   if( ($self->_count_genomic_bases($promer_filename )*100)/$original_base_count >=  $self->minimum_perc_to_keep)
   {
-    return $promer_filename->final_output_filename ;
+    return $promer_filename;
   }
   
   return $self->input_assembly;
@@ -89,7 +89,7 @@ Bio::AssemblyImprovement::Abacas::Iterative - Iteratively run abacas to order co
 
 =head1 VERSION
 
-version 1.131890
+version 1.132610
 
 =head1 SYNOPSIS
 

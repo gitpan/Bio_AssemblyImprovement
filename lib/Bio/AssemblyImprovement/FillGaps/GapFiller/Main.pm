@@ -13,6 +13,7 @@ has 'input_files'     => ( is => 'ro', isa => 'ArrayRef', required => 1     );
 has 'insert_size'     => ( is => 'ro', isa => 'Int',      required => 1     );
 has 'mapper'          => ( is => 'ro', isa => 'Str',      default  => 'bwa' );
 has 'merge_size'      => ( is => 'ro', isa => 'Int',      default  => 10    );
+has 'threads'		  => ( is => 'ro', isa => 'Int',      default  => 1     );
 has 'gap_filler_exec' => ( is => 'rw', isa => 'Str',      required => 1     );
 has 'debug'           => ( is => 'ro', isa => 'Bool',     default  => 0     );
 has 'num_iterations'  => ( is => 'ro', isa => 'Int',      default  => 20    );
@@ -51,6 +52,7 @@ sub run {
                 '-s', $self->input_assembly, 
                 '-i', $self->num_iterations,
                 '-m', $self->merge_size,
+                '-T', $self->threads,
                 '-b', $self->_output_prefix,
                 $stdout_of_program
             )
@@ -75,7 +77,7 @@ Bio::AssemblyImprovement::FillGaps::GapFiller::Main - Run a single iteration of 
 
 =head1 VERSION
 
-version 1.131890
+version 1.132610
 
 =head1 SYNOPSIS
 
@@ -88,6 +90,7 @@ Run a single iteration of gapfiller.
      input_assembly => 'contigs.fa'
      insert_size => 250,
      merge_size => 5,
+     threads => 2,
      gap_filler_exec => '/path/to/SSPACE.pl',
 
      _output_prefix => 'gapfilled'

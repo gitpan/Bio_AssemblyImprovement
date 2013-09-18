@@ -74,7 +74,7 @@ Bio::AssemblyImprovement::PrepareForSubmission::RenameContigs - Update the names
 
 =head1 VERSION
 
-version 1.131890
+version 1.132610
 
 =head1 SYNOPSIS
 

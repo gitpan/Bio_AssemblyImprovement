@@ -5,11 +5,17 @@ package Bio::AssemblyImprovement::Scaffold::SSpace::Config;
 use Moose;
 
 has 'input_files'     => ( is => 'ro', isa => 'ArrayRef', required => 1 );
-has 'insert_size'     => ( is => 'ro', isa => 'Int',      required => 1 );
+has '_default_insert_size' => ( is => 'ro', isa => 'Int',      default => 300 );
+has 'insert_size'     => ( is => 'rw', isa => 'Int',      required => 1 );
 has 'output_filename' => ( is => 'rw', isa => 'Str',      default  => '_scaffolder.config' );
 
 sub create_config_file {
     my ($self) = @_;
+    
+    if(!defined($self->insert_size) || $self->insert_size == 0 )
+    {
+      $self->insert_size($self->_default_insert_size);
+    }
 
     my $input_file_names = join( ' ', @{ $self->input_files } );
     open( my $lib_fh, "+>", $self->output_filename );
@@ -33,7 +39,7 @@ Bio::AssemblyImprovement::Scaffold::SSpace::Config - Create the config file that
 
 =head1 VERSION
 
-version 1.131890
+version 1.132610
 
 =head1 SYNOPSIS
 
