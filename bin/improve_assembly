@@ -158,7 +158,7 @@ improve_assembly - Given an assembly, some reads and optionally a reference, red
 
 =head1 VERSION
 
-version 1.132610
+version 1.133090
 
 =head1 SYNOPSIS
 

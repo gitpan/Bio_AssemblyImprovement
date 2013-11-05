@@ -92,7 +92,7 @@ Bio::AssemblyImprovement::Util::OrderContigsByLength - Sorts a fasta file by seq
 
 =head1 VERSION
 
-version 1.132610
+version 1.133090
 
 =head1 SYNOPSIS
 

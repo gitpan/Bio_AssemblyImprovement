@@ -99,7 +99,7 @@ Bio::AssemblyImprovement::PrimerRemoval::Main - Remove a set of specified primer
 
 =head1 VERSION
 
-version 1.132610
+version 1.133090
 
 =head1 SYNOPSIS
 

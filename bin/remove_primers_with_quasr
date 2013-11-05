@@ -90,7 +90,7 @@ remove_primers_with_quasr - Given a forward and reverse FASTQ file and a file wi
 
 =head1 VERSION
 
-version 1.132610
+version 1.133090
 
 =head1 SYNOPSIS
 

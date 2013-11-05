@@ -105,7 +105,7 @@ Bio::AssemblyImprovement::DigitalNormalisation::Khmer::Main - Perform digital no
 
 =head1 VERSION
 
-version 1.132610
+version 1.133090
 
 =head1 SYNOPSIS
 

@@ -61,7 +61,7 @@ Bio::AssemblyImprovement::Util::FastaTools - Utilities for sequences in a FASTA 
 
 =head1 VERSION
 
-version 1.132610
+version 1.133090
 
 =head1 SYNOPSIS
 
