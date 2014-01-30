@@ -86,13 +86,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Bio::AssemblyImprovement::Assemble::SGA::IndexAndCorrectReads - Performs SGA error correction on the reads 
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

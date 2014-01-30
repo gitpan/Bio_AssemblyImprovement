@@ -110,13 +110,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 diginorm_with_khmer - Given a fastq file, it performs digital normalisation on the reads using khmer
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

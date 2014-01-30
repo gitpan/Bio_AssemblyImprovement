@@ -76,7 +76,7 @@ read_correction_with_sga -h
 
 USAGE
 
-$sga_exec ||= '/software/pathogen/external/apps/usr/local/src/SGA/sga'; #Do we need to check if executable available?
+$sga_exec ||= '/software/pathogen/external/apps/usr/local/bin/sga'; #Do we need to check if executable available?
 
 $min_length ||= 66;
 $quality_trim ||= 20;
@@ -132,13 +132,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 read_correction_with_sga - Given a fastq file(s), perform SGA preprocessing and error correction
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

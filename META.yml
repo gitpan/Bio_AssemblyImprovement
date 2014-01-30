@@ -2,39 +2,17 @@
 abstract: 'Improve an assembly by scaffolding, contig ordering and gap closing.'
 author:
   - 'Andrew J. Page <ap13@sanger.ac.uk>'
-build_requires:
-  File::Slurp: 0
-  Test::File::Contents: 0
-  Test::Most: 0
+build_requires: {}
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300029, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.132830'
 license: gpl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Bio_AssemblyImprovement
-requires:
-  Bio::SeqIO: 0
-  Cwd: 0
-  File::Basename: 0
-  File::Copy: 0
-  File::Path: 2.07
-  File::Temp: 0
-  File::Which: 0
-  Getopt::Long: 0
-  Getopt::Std: 0
-  IO::Compress::Gzip: 0
-  IO::Uncompress::Gunzip: 0
-  Moose: 0
-  Moose::Role: 0
-  POSIX: 0
-  Statistics::Lite: 0
-  Switch: 0
-  strict: 0
-  warnings: 0
 resources:
   homepage: http://www.sanger.ac.uk/
   repository: https://github.com/sanger-pathogens/assembly_improvement.git
-version: 1.133090
+version: 1.140300

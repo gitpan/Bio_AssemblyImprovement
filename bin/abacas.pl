@@ -1984,13 +1984,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 abacas.pl - Algorithm Based Automatic Contiguation of Assembled Sequences
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 AUTHOR
 

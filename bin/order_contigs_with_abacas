@@ -60,13 +60,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 order_contigs_with_abacas - Given an assembly and a reference, order the contigs
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

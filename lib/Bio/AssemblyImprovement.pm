@@ -17,13 +17,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Bio::AssemblyImprovement - Improve an assembly by scaffolding, contig ordering and gap closing.
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

@@ -83,13 +83,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Bio::AssemblyImprovement::Abacas::Iterative - Iteratively run abacas to order contigs
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

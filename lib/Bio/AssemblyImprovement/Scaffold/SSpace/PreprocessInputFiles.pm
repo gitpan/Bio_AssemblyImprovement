@@ -58,13 +58,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Bio::AssemblyImprovement::Scaffold::SSpace::PreprocessInputFiles - Make sure the input files are in the correct format, and paths are resolved.
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

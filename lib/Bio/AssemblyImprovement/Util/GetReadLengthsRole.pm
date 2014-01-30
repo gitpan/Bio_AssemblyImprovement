@@ -54,13 +54,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Bio::AssemblyImprovement::Util::GetReadLengthsRole - Role for getting the read lengths from a fastq file (useful when reads are of varying lengths)
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

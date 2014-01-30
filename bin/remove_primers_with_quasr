@@ -64,7 +64,7 @@ make_path($output_directory);
 $leeway ||= 5;
 $minimum_length ||= 50;
 $median_quality ||= 30;
-$quasr_exec ||= '/software/pathogen/internal/pathdev/java/QUASR702_Parser/readsetProcessor.jar'; 
+$quasr_exec ||= '/software/pathogen/external/apps/usr/local/QUASR/readsetProcessor.jar'; 
 $debug           ||= 0;
 
 
@@ -84,13 +84,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 remove_primers_with_quasr - Given a forward and reverse FASTQ file and a file with primers, it will remove the primers if it appears within a specified distance from the beginning of the read 
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

@@ -69,6 +69,11 @@ improve_assembly -h
 
 USAGE
 
+# abs_path to inputs
+$assembly_file = abs_path($assembly_file) if(defined $assembly_file);
+$forward_reads_file = abs_path($forward_reads_file) if(defined $forward_reads_file);
+$reverse_reads_file = abs_path($reverse_reads_file) if(defined $reverse_reads_file);
+
 $debug           ||= 0;
 $insert_size     ||= 250;
 $min_final_contig_length ||= 300;
@@ -104,6 +109,7 @@ my $scaffolding_obj = Bio::AssemblyImprovement::Scaffold::SSpace::Iterative->new
 $scaffolding_obj->run();
 
 my $scaffolding_output = $scaffolding_obj->final_output_filename;
+my $fill_gaps_input = $scaffolding_output;
 
 # order contigs on an assembly
 if(defined($reference))
@@ -115,14 +121,14 @@ if(defined($reference))
     debug          => $debug,
     output_base_directory => $output_directory
   );
-  $scaffolding_obj->run();
+  $fill_gaps_input = $scaffolding_obj->run();
 }
 
 
 # fill gaps
 my $fill_gaps_obj = Bio::AssemblyImprovement::FillGaps::GapFiller::Iterative->new(
     input_files     => $preprocess_input_files->processed_input_files,
-    input_assembly  => $scaffolding_obj->final_output_filename,
+    input_assembly  => $fill_gaps_input,
     insert_size     => $insert_size,
     gap_filler_exec => $gapfiller_exec,
     debug           => $debug,
@@ -152,13 +158,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 improve_assembly - Given an assembly, some reads and optionally a reference, reduce the number of contigs and fill gaps.
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 

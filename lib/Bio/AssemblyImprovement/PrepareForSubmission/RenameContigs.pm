@@ -68,13 +68,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Bio::AssemblyImprovement::PrepareForSubmission::RenameContigs - Update the names of the contigs so that the assembly can be submitted to a database like EMBL
 
 =head1 VERSION
 
-version 1.133090
+version 1.140300
 
 =head1 SYNOPSIS
 
